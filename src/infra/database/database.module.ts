@@ -16,7 +16,6 @@ import databaseConfig from '../config/database.config.js';
         synchronize: false,
         migrationsRun: true,
         migrations: [`${import.meta.dirname}/migrations/*.{js,ts}`],
-        entities: [`${import.meta.dirname}/entities/*.{js,ts}`],
       }),
     }),
   ],

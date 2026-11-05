@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { DataSource } from 'typeorm';
 
 export default new DataSource({
@@ -8,6 +9,6 @@ export default new DataSource({
   password: process.env.MYSQL_ROOT_PASSWORD ?? 'root',
   database: process.env.DATABASE_NAME ?? 'root',
   synchronize: false,
-  entities: [`${import.meta.dirname}/entities/*.{js,ts}`],
+  entities: [`${import.meta.dirname}/../../**/*.entity.{js,ts}`],
   migrations: [`${import.meta.dirname}/migrations/*.{js,ts}`],
 });

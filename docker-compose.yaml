@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql:latest
+    image: mysql:8
     ports:
       - '8080:3306'
     environment:
